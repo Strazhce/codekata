@@ -35,16 +35,16 @@ public class WeatherParser {
 		return list;
 	}
 
-	public WeatherItem parseLine(String testline) {
+	public ListItem parseLine(String testline) {
 		int dayNumber=Integer.parseInt(testline.substring(2, 4).trim());
 		double minTemp=Double.parseDouble(testline.substring(6, 8).trim());
 		double maxTemp=Double.parseDouble(testline.substring(12, 14).trim());
 		
-		return new WeatherItem(dayNumber, minTemp, maxTemp);
+		return new ListItem(dayNumber, minTemp, maxTemp);
 	}
 
-	public WeatherData getWeatherData() {
-		WeatherData data = new WeatherData();
+	public ListData getWeatherData() {
+		ListData data = new ListData();
 		List<String> weatherItemsText = getWeatherItemsText();
 		for (String itemText : weatherItemsText) {
 			data.addItem(parseLine(itemText));

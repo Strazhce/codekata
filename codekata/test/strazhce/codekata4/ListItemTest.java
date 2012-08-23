@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class WeatherItemTest {
+public class ListItemTest {
 
 	private static final double TEMP2 = 7.1;
 	private static final double TEMP1 = 2.5;
@@ -13,9 +13,9 @@ public class WeatherItemTest {
 
 	@Test
 	public void testSpread() {
-		WeatherItem item = new WeatherItem(1,TEMP1,TEMP2);
+		IListItem item = new ListItem(1,TEMP1,TEMP2);
 		
-		Assert.assertEquals("Spread",SPREAD, item.getTempSpread(),0);
+		Assert.assertEquals("Spread",SPREAD, item.getSpread(),0);
 	}
 
 }

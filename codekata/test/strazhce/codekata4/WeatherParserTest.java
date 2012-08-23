@@ -34,7 +34,7 @@ public class WeatherParserTest {
 	@Test
 	public void testParseLine() {
 		WeatherParser parser = createParser();
-		WeatherItem item = parser.parseLine(TESTLINE);
+		ListItem item = parser.parseLine(TESTLINE);
 
 		Assert.assertEquals("Day", 26, item.getDayNumber());
 		Assert.assertEquals("Min", 97, item.getMinTemp(), 0);
@@ -44,10 +44,10 @@ public class WeatherParserTest {
 	@Test
 	public void testGetWeatherData() {
 		WeatherParser parser = createParser();
-		WeatherData data = parser.getWeatherData();
+		ListData data = parser.getWeatherData();
 
 		Assert.assertEquals("Number of items", 30, data.size());
-		Assert.assertEquals("First day number", 1, data.get(0).getDayNumber());
+		Assert.assertEquals("First day number", "1", data.get(0).getName());
 	}
 
 	private void checkStartOfLine(String startOfLine, String item) {

@@ -6,8 +6,8 @@ public class PartOneRunner {
 	public static void main(String[] args) {
 		DayWithMinimalSpread minimalSpread = new DayWithMinimalSpread(new WeatherParser(new File("resources/weather.dat")).getWeatherData());
 		
-		WeatherItem itemWithMinimalSpread = minimalSpread.getItemWithMinimalSpread();
+		IListItem itemWithMinimalSpread = minimalSpread.getItemWithMinimalSpread();
 		
-		System.out.println(itemWithMinimalSpread.getDayNumber());
+		System.out.println(itemWithMinimalSpread.getName());
 	}
 }

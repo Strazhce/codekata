@@ -7,31 +7,31 @@ import java.util.Iterator;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class WeatherDataTest {
+public class ListDataTest {
 
 	@Test
 	public void testEmpty() {
-		Iterator<WeatherItem> iterator = new WeatherData().iterator();
+		Iterator<IListItem> iterator = new ListData().iterator();
 		Assert.assertNotNull("Iterator is null", iterator);
 		doesntHaveMoreItems(iterator);
 	}
 
-	private void doesntHaveMoreItems(Iterator<WeatherItem> iterator) {
+	private void doesntHaveMoreItems(Iterator<?> iterator) {
 		Assert.assertFalse("Shouldn't have any more items", iterator.hasNext());
 	}
 
 	@Test
 	public void testSomeItems() {
-		WeatherData data = new WeatherData();
-		WeatherItem item = new WeatherItem(1, 0, 2);
+		ListData data = new ListData();
+		ListItem item = new ListItem(1, 0, 2);
 		data.addItem(item);
 
-		Iterator<WeatherItem> iterator = data.iterator();
+		Iterator<IListItem> iterator = data.iterator();
 		Assert.assertEquals("Should be same items", item, iterator.next());
 		doesntHaveMoreItems(iterator);
 
 		Assert.assertEquals("Size", 1, data.size());
-		data.addItem(new WeatherItem(5, 3, 5));
+		data.addItem(new ListItem(5, 3, 5));
 		Assert.assertEquals("Size", 2, data.size());
 	}
 

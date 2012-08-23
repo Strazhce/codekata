@@ -4,24 +4,24 @@ import java.util.Iterator;
 
 public class DayWithMinimalSpread {
 
-	private WeatherData data;
+	private ListData data;
 
-	public DayWithMinimalSpread(WeatherData data) {
+	public DayWithMinimalSpread(ListData data) {
 		this.data = data;
 	}
 
-	public WeatherItem getItemWithMinimalSpread() {
-		WeatherItem res;
+	public IListItem getItemWithMinimalSpread() {
+		IListItem res;
 
-		Iterator<WeatherItem> iterator = data.iterator();
+		Iterator<IListItem> iterator = data.iterator();
 		res = iterator.next();
 		if (res == null) {
 			return null;
 		}
 
 		while (iterator.hasNext()) {
-			WeatherItem next = iterator.next();
-			if (res.getTempSpread() > next.getTempSpread()) {
+			IListItem next = iterator.next();
+			if (res.getSpread() > next.getSpread()) {
 				res = next;
 			}
 		}

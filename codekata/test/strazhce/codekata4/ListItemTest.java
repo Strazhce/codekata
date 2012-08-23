@@ -13,9 +13,15 @@ public class ListItemTest {
 
 	@Test
 	public void testSpread() {
-		IListItem item = new ListItem(1,TEMP1,TEMP2);
+		IListItem item = new ListItem("1",TEMP1,TEMP2);
 		
 		Assert.assertEquals("Spread",SPREAD, item.getSpread(),0);
 	}
 
+	
+	public void testSpreadReverse() {
+		IListItem item = new ListItem("1",TEMP2,TEMP1);
+		
+		Assert.assertEquals("Spread",SPREAD, item.getSpread(),0);
+	}
 }

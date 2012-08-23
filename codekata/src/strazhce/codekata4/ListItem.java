@@ -2,36 +2,32 @@ package strazhce.codekata4;
 
 public class ListItem implements IListItem {
 
-	private int dayNumber;
-	private double minTemp;
-	private double maxTemp;
+	private String name;
+	private double lowValue;
+	private double highValue;
 
-	public ListItem(int dayNumber, double minTemp, double maxTemp) {
+	public ListItem(String name, double minTemp, double maxTemp) {
 		super();
-		this.dayNumber = dayNumber;
-		this.minTemp = minTemp;
-		this.maxTemp = maxTemp;
+		this.name = name;
+		this.lowValue = minTemp;
+		this.highValue = maxTemp;
 	}
 
-	public int getDayNumber() {
-		return dayNumber;
+	public String getName() {
+		return name;
 	}
 
-	public double getMinTemp() {
-		return minTemp;
+	public double getLowValue() {
+		return lowValue;
 	}
 
-	public double getMaxTemp() {
-		return maxTemp;
+	public double getHighValue() {
+		return highValue;
 	}
 
 	@Override
 	public double getSpread() {
-		return maxTemp - minTemp;
+		return Math.abs(highValue - lowValue);
 	}
 
-	@Override
-	public String getName() {
-		return Integer.toString(dayNumber);
-	}
 }

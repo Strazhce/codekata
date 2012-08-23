@@ -23,7 +23,7 @@ public class ListDataTest {
 	@Test
 	public void testSomeItems() {
 		ListData data = new ListData();
-		ListItem item = new ListItem(1, 0, 2);
+		IListItem item = new ListItem("1", 0, 2);
 		data.addItem(item);
 
 		Iterator<IListItem> iterator = data.iterator();
@@ -31,7 +31,7 @@ public class ListDataTest {
 		doesntHaveMoreItems(iterator);
 
 		Assert.assertEquals("Size", 1, data.size());
-		data.addItem(new ListItem(5, 3, 5));
+		data.addItem(new ListItem("5", 3, 5));
 		Assert.assertEquals("Size", 2, data.size());
 	}
 

@@ -1,10 +1,7 @@
 package strazhce.codekata4;
 
-import static org.junit.Assert.*;
-
 import java.io.File;
 import java.util.List;
-import java.util.regex.Pattern;
 
 import junit.framework.Assert;
 

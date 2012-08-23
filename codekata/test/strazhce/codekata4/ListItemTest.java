@@ -1,7 +1,5 @@
 package strazhce.codekata4;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 

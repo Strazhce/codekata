@@ -1,7 +1,6 @@
 package strazhce.codekata4;
 
 import java.io.File;
-import java.util.List;
 
 public class WeatherParser extends BaseParser {
 

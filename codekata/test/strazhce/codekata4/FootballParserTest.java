@@ -60,9 +60,4 @@ public class FootballParserTest {
 		Assert.assertEquals("Line not starts with " + startOfLine, startOfLine, item.substring(0, startOfLine.length()));
 	}
 	
-	@Test
-	public void testRegex(){
-		assertTrue(Pattern.compile("   \\d\\d\\.").matcher(TESTLINE).find());
-//		assertTrue("   11. Southampton     38    12   9  17    46  -  54    45".matches(" "));
-	}
 }

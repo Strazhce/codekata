@@ -3,15 +3,15 @@ package strazhce.codekata4;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class ListData implements Iterable<IListItem>{
+public class ListData implements Iterable<ListItem>{
 
-	private LinkedList<IListItem> items = new LinkedList<IListItem>();
+	private LinkedList<ListItem> items = new LinkedList<ListItem>();
 
-	public void addItem(IListItem IListItem){ 
-		items.add(IListItem);
+	public void addItem(ListItem ListItem){ 
+		items.add(ListItem);
 	}
 
-	public Iterator<IListItem> iterator() {
+	public Iterator<ListItem> iterator() {
 		return items.iterator();
 	}
 
@@ -19,7 +19,7 @@ public class ListData implements Iterable<IListItem>{
 		return items.size();
 	}
 
-	public IListItem get(int i) {
+	public ListItem get(int i) {
 		return items.get(i);
 	}
 

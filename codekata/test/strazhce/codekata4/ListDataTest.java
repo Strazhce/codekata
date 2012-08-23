@@ -11,7 +11,7 @@ public class ListDataTest {
 
 	@Test
 	public void testEmpty() {
-		Iterator<IListItem> iterator = new ListData().iterator();
+		Iterator<ListItem> iterator = new ListData().iterator();
 		Assert.assertNotNull("Iterator is null", iterator);
 		doesntHaveMoreItems(iterator);
 	}
@@ -23,10 +23,10 @@ public class ListDataTest {
 	@Test
 	public void testSomeItems() {
 		ListData data = new ListData();
-		IListItem item = new ListItem("1", 0, 2);
+		ListItem item = new ListItem("1", 0, 2);
 		data.addItem(item);
 
-		Iterator<IListItem> iterator = data.iterator();
+		Iterator<ListItem> iterator = data.iterator();
 		Assert.assertEquals("Should be same items", item, iterator.next());
 		doesntHaveMoreItems(iterator);
 

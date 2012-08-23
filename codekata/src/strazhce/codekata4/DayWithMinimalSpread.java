@@ -10,17 +10,17 @@ public class DayWithMinimalSpread {
 		this.data = data;
 	}
 
-	public IListItem getItemWithMinimalSpread() {
-		IListItem res;
+	public ListItem getItemWithMinimalSpread() {
+		ListItem res;
 
-		Iterator<IListItem> iterator = data.iterator();
+		Iterator<ListItem> iterator = data.iterator();
 		res = iterator.next();
 		if (res == null) {
 			return null;
 		}
 
 		while (iterator.hasNext()) {
-			IListItem next = iterator.next();
+			ListItem next = iterator.next();
 			if (res.getSpread() > next.getSpread()) {
 				res = next;
 			}

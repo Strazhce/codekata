@@ -1,6 +1,6 @@
 package strazhce.codekata4;
 
-public class ListItem implements IListItem {
+public class ListItem  {
 
 	private String name;
 	private double lowValue;
@@ -25,7 +25,6 @@ public class ListItem implements IListItem {
 		return highValue;
 	}
 
-	@Override
 	public double getSpread() {
 		return Math.abs(highValue - lowValue);
 	}
